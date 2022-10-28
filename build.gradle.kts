@@ -99,7 +99,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "com.cunningbird.templates"
             artifactId = "contract-first-rest"
-            version = "1.0.1"
+            version = "1.0.2"
             from(components["java"])
         }
     }

@@ -17,11 +17,13 @@ public class PetsApiMock implements PetsApi {
         pet1.setId(1L);
         pet1.setName("Ricardo");
         pet1.setTag("Cat");
+        pet1.setAge("1");
 
         Pet pet2 = new Pet();
         pet2.setId(1L);
         pet2.setName("Ricardo");
         pet2.setTag("Cat");
+        pet2.setName("2");
 
         List<Pet> pets = new ArrayList<>();
         pets.add(pet1);
@@ -35,6 +37,7 @@ public class PetsApiMock implements PetsApi {
         pet.setId(1L);
         pet.setName("Ricardo");
         pet.setTag("Cat");
+        pet.setName("1");
 
         return new ResponseEntity<>(pet, HttpStatus.OK);
     }

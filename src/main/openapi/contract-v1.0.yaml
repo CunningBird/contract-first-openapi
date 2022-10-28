@@ -80,6 +80,8 @@ components:
           type: string
         tag:
           type: string
+        age:
+          type: string
     Pets:
       type: array
       items:
