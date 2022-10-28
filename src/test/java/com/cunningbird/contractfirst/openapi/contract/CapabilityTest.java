@@ -1,8 +1,8 @@
-package com.cunningbird.templates.contractfirstrest;
+package com.cunningbird.contractfirst.openapi.contract;
 
-import com.cunningbird.templates.contractfirstrest.api.PetsApi;
-import com.cunningbird.templates.contractfirstrest.controller.PetsApiMock;
-import com.cunningbird.templates.contractfirstrest.model.Pet;
+import com.cunningbird.contractfirst.openapi.contract.api.PetsApi;
+import com.cunningbird.contractfirst.openapi.contract.controller.PetsApiMock;
+import com.cunningbird.contractfirst.openapi.contract.model.Pet;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +12,7 @@ public class CapabilityTest {
     private final PetsApi server = new PetsApiMock();
 
     @Test
-    public void test1() {
+    public void testShowPetById() {
         ResponseEntity<Pet> response = server.showPetById(1L);
 
         Pet pet = response.getBody();

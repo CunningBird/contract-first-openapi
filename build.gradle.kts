@@ -21,7 +21,7 @@ dependencies {
     compileOnly("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.4")
     compileOnly("org.openapitools:jackson-databind-nullable:0.2.4")
 
-    // Bean Validation API support
+    // Test context
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.0")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.0")
     testImplementation("org.springframework.boot:spring-boot-starter-test:2.7.5")
@@ -58,9 +58,9 @@ openApiGenerate {
         )
     )
 
-    apiPackage.set("com.cunningbird.templates.contractfirstrest.api")
-    invokerPackage.set("com.cunningbird.templates.contractfirstrest.invoker")
-    modelPackage.set("com.cunningbird.templates.contractfirstrest.model")
+    apiPackage.set("com.cunningbird.contractfirst.openapi.contract.api")
+    invokerPackage.set("com.cunningbird.contractfirst.openapi.contract.invoker")
+    modelPackage.set("com.cunningbird.contractfirst.openapi.contract.model")
 }
 
 sourceSets {
@@ -97,9 +97,9 @@ publishing {
     }
     publications {
         create<MavenPublication>("maven") {
-            groupId = "com.cunningbird.templates"
-            artifactId = "contract-first-rest"
-            version = "1.0.2"
+            groupId = "com.cunningbird.contractfirst.openapi"
+            artifactId = "contract"
+            version = "1.0.0"
             from(components["java"])
         }
     }
