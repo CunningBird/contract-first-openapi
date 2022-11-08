@@ -1,4 +1,4 @@
-package com.cunningbird.contractfirst.openapi.contract.controller;
+package com.cunningbird.contractfirst.openapi.contract.mock;
 
 import com.cunningbird.contractfirst.openapi.contract.api.PetsApi;
 import com.cunningbird.contractfirst.openapi.contract.model.Pet;
@@ -18,6 +18,11 @@ public class PetsApiMock implements PetsApi {
         pet.setTag("Cat");
 
         return new ResponseEntity<>(pet, HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity<Void> createPet() {
+        return null;
     }
 
     @Override

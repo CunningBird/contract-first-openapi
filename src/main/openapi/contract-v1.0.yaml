@@ -39,6 +39,20 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
+    post:
+      summary: Create a pet
+      operationId: createPet
+      tags:
+        - pets
+      responses:
+        '200':
+          description: Created
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
   /pets/{petId}:
     get:
       summary: Info for a specific pet
@@ -60,20 +74,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Pet"
-        default:
-          description: unexpected error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Error"
-    post:
-      summary: Create a pet
-      operationId: createPet
-      tags:
-        - pets
-      responses:
-        '201':
-          description: Null response
         default:
           description: unexpected error
           content:

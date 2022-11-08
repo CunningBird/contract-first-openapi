@@ -1,7 +1,7 @@
 package com.cunningbird.contractfirst.openapi.contract;
 
 import com.cunningbird.contractfirst.openapi.contract.api.PetsApi;
-import com.cunningbird.contractfirst.openapi.contract.controller.PetsApiMock;
+import com.cunningbird.contractfirst.openapi.contract.mock.PetsApiMock;
 import com.cunningbird.contractfirst.openapi.contract.model.Pet;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
