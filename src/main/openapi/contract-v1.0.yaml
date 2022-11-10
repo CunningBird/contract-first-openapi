@@ -44,8 +44,15 @@ paths:
       operationId: createPet
       tags:
         - pets
+      requestBody:
+        required: true
+        description: Pet for creation
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Pet"
       responses:
-        '200':
+        '201':
           description: Created
         default:
           description: unexpected error

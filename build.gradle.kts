@@ -26,10 +26,10 @@ dependencies {
     // Test context
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.0")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.0")
-
+    testImplementation("org.springframework.boot:spring-boot-starter-test:2.7.5")
+    testImplementation("org.springframework.boot:spring-boot-starter-web:2.7.5")
+    testImplementation("org.springframework.cloud:spring-cloud-starter-openfeign:3.1.5")
     testImplementation("javax.annotation:javax.annotation-api:1.3.2")
-    testImplementation("org.springframework:spring-web:5.3.23")
-    testImplementation("org.springframework:spring-context:5.3.23")
     testImplementation("javax.validation:validation-api:2.0.1.Final")
     testImplementation("javax.servlet:javax.servlet-api:4.0.1")
     testImplementation("io.swagger:swagger-annotations:1.6.8")
@@ -37,11 +37,6 @@ dependencies {
     testImplementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.4")
     testImplementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.4")
     testImplementation("org.openapitools:jackson-databind-nullable:0.2.4")
-
-
-//    compileOnly("io.springfox:springfox-swagger-common:3.0.0")
-    //compileOnly("org.springdoc:springdoc-openapi-webmvc-core:1.6.12")
-    //compileOnly("io.springfox:springfox-swagger2:3.0.0")
 }
 
 val schemaPath = "$rootDir/src/main/openapi/contract-v1.0.yaml"
@@ -104,7 +99,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/cunningbird/contract-first-rest")
+            url = uri("https://maven.pkg.github.com/cunningbird/contract-first-openapi")
             credentials {
                 username = System.getProperty("publishRegistryUsername")
                 password = System.getProperty("publishRegistryPassword")

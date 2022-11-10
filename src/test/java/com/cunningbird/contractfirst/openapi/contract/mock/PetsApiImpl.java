@@ -4,11 +4,13 @@ import com.cunningbird.contractfirst.openapi.contract.api.PetsApi;
 import com.cunningbird.contractfirst.openapi.contract.model.Pet;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PetsApiMock implements PetsApi {
+@RestController
+public class PetsApiImpl implements PetsApi {
 
     @Override
     public ResponseEntity<Pet> showPetById(Long petId) {
@@ -21,8 +23,8 @@ public class PetsApiMock implements PetsApi {
     }
 
     @Override
-    public ResponseEntity<Void> createPet() {
-        return null;
+    public ResponseEntity<Void> createPet(Pet pet) {
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
     @Override
