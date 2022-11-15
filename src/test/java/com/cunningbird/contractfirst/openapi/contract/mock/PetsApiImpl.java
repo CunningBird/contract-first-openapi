@@ -14,12 +14,13 @@ public class PetsApiImpl implements PetsApi {
 
     @Override
     public ResponseEntity<Pet> showPetById(Long petId) {
-        Pet pet = new Pet();
-        pet.setId(1L);
-        pet.setName("Ricardo");
-        pet.setTag("Cat");
+        Pet expected = new Pet();
+        expected.setId(1L);
+        expected.setName("Ricardo");
+        expected.setTag("Cat");
+        expected.setAge(23L);
 
-        return new ResponseEntity<>(pet, HttpStatus.OK);
+        return new ResponseEntity<>(expected, HttpStatus.OK);
     }
 
     @Override
@@ -33,15 +34,17 @@ public class PetsApiImpl implements PetsApi {
         pet1.setId(1L);
         pet1.setName("Ricardo");
         pet1.setTag("Cat");
+        pet1.setAge(25L);
 
         Pet pet2 = new Pet();
         pet2.setId(1L);
         pet2.setName("Ricardo");
         pet2.setTag("Cat");
+        pet2.setAge(23L);
 
-        List<Pet> pets = new ArrayList<>();
-        pets.add(pet1);
-        pets.add(pet2);
-        return new ResponseEntity<>(pets, HttpStatus.OK);
+        List<Pet> expected = new ArrayList<>();
+        expected.add(pet1);
+        expected.add(pet2);
+        return new ResponseEntity<>(expected, HttpStatus.OK);
     }
 }
