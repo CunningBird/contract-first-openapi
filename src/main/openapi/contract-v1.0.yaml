@@ -101,6 +101,8 @@ components:
           type: string
         tag:
           type: string
+        owner:
+          type: string
         age:
           type: integer
           format: int64
