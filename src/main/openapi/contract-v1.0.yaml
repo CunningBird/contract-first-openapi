@@ -101,11 +101,9 @@ components:
           type: string
         tag:
           type: string
-        owner:
-          type: string
-        age:
-          type: integer
-          format: int64
+#        age:
+#          type: integer
+#          format: int64
     Pets:
       type: array
       items:

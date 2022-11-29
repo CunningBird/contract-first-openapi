@@ -18,7 +18,7 @@ public class PetsApiImpl implements PetsApi {
         expected.setId(1L);
         expected.setName("Ricardo");
         expected.setTag("Cat");
-        expected.setAge(23L);
+        //expected.setAge(23L);
 
         return new ResponseEntity<>(expected, HttpStatus.OK);
     }
@@ -34,13 +34,13 @@ public class PetsApiImpl implements PetsApi {
         pet1.setId(1L);
         pet1.setName("Ricardo");
         pet1.setTag("Cat");
-        pet1.setAge(25L);
+        //pet1.setAge(25L);
 
         Pet pet2 = new Pet();
         pet2.setId(1L);
         pet2.setName("Ricardo");
         pet2.setTag("Cat");
-        pet2.setAge(23L);
+        //pet2.setAge(23L);
 
         List<Pet> expected = new ArrayList<>();
         expected.add(pet1);

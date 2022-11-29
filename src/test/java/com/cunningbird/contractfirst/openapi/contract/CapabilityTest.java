@@ -34,13 +34,13 @@ public class CapabilityTest {
         pet1.setId(1L);
         pet1.setName("Ricardo");
         pet1.setTag("Cat");
-        pet1.setAge(25L);
+        //pet1.setAge(25L);
 
         Pet pet2 = new Pet();
         pet2.setId(1L);
         pet2.setName("Ricardo");
         pet2.setTag("Cat");
-        pet2.setAge(23L);
+        //pet2.setAge(23L);
 
         List<Pet> expected = new ArrayList<>();
         expected.add(pet1);
@@ -59,8 +59,7 @@ public class CapabilityTest {
         expected.setId(1L);
         expected.setName("Ricardo");
         expected.setTag("Cat");
-        expected.setAge(23L);
-
+        //expected.setAge(23L);
 
         Pet actual = response.getBody();
         Assertions.assertEquals(expected, actual);
@@ -72,7 +71,8 @@ public class CapabilityTest {
         pet.setId(4L);
         pet.setName("Billy");
         pet.setTag("cat");
-        pet.setAge(23L);
+        //pet.setAge(23L);
+
         ResponseEntity<Void> response = client.createPet(pet);
         Assertions.assertEquals(HttpStatus.CREATED, response.getStatusCode());
     }

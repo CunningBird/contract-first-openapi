@@ -110,7 +110,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "com.cunningbird.contractfirst.openapi"
             artifactId = "contract"
-            version = "1.1.1"
+            version = "1.0.0"
             from(components["java"])
         }
     }
